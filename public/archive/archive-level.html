@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JET-Archive Category</title>
+    <link rel="stylesheet" href="/archive/css/archive.css">
+    <link rel="stylesheet" href="/general/css/general-style.css">
+    <script src="/general/js/jquery.min.js"></script>
+</head>
+<body>
+    <!-- menu -->
+     <div class="menu">
+        <ul id="menu"></ul>
+    </div>
+    <!-- nav -->
+    <nav id="nav"></nav>
+    <ul id= "searchoption"></ul>
+    <div id="generalinfo"></div>
+    <div class="container">
+        <h2>JETARchive</h2>
+        <div class="top">
+            <div class="slider" id="slider">
+                <h3>Welcome to the JETARchive</h3>
+                <p>Most materials found here, were uploaded by students like you</p>
+                <p>To Upload your's, You have to Login</p>
+
+                <p>Please select a category to proceed.</p>
+            </div>
+            <div class="top-right">
+                <div class="">
+                    <h3>Past Questions:</h3>
+                    <p id="pq">5000</p>
+                </div>
+                <div class="">
+                    <h3>Handouts:</h3>
+                    <p id="hd">4000</p>
+                </div>
+                <div class="">
+                    <h3>Tutorial videos:</h3>
+                    <p id="tv">5,400</p>
+                </div>
+                <div class="">
+                    <h3>Total:</h3>
+                    <p id="total">14,400</p>
+                </div>
+            </div>
+        </div>
+        <!-- <a href="/archive"><p id="back"> &#8592;</p></a> -->
+        <section>
+            <div class="lev">LEVEL :</div>
+            <div class="level">
+                
+                <div id="level1" class="leve" onclick="showlevel(1)">100</div>
+                <div id="level2" class="leve" onclick="showlevel(2)">200</div>
+                <div id="level3" class="leve" onclick="showlevel(3)">300</div>
+                <div id="level4" class="leve" onclick="showlevel(4)">400</div>
+                <div id="level5" class="leve" onclick="showlevel(5)">500</div>
+            </div>
+            <div class="uploads">
+                    <div id="lev100" class="cute">
+            
+                        
+                    </div>
+                    <div id="lev200" class="cute">
+                    </div>
+                    <div id="lev300" class="cute">
+                    </div>
+                    <div id="lev400" class="cute">
+                    </div>
+                    <div id="lev500" class="cute">
+                    </div>
+                </div>
+        </section>
+        
+    </div>
+    <script>
+        var courses;
+        window.onload = function(){
+            var ur= "/archive/dpt/level";
+            var h = new Headers();
+            h.append("Accept", "application/json")
+            var req11 = new Request(ur, {
+                method:"GET",
+                headers: h,
+                mode: "cors"
+            });
+            fetch(req11).then((res)=>{
+                if(res.ok){
+                    return res.json();
+                }
+            }).then((data)=>{
+                console.log(data);
+                courses= data
+                showlevel(1)
+                loadcourses(courses);
+            }).catch((error)=>{
+                console.log(error);
+            });
+        }
+
+        function showlevel(index){
+            for(i=1; i<=5; i++){
+                document.getElementById(`level${i}`).style.backgroundColor = "white";
+                document.getElementById(`lev${i}00`).style.display = " none";
+                
+            }
+
+            document.getElementById(`level${index}`).style.backgroundColor = "#ffc107";
+            document.getElementById(`lev${index}00`).style.display = " grid";
+        }
+
+        function loadcourses(data){
+            for(j=0; j<5; j++){
+                var hi = j+1;
+                // console.log(hi)
+                var h = document.getElementById(`lev${hi}00`);
+                for(i=0; i<data.level[`${hi}00`].length; i++){
+                    // console.log(i);
+                    hh = `<a href="/archive/course/`+ data.level[`${hi}00`][i].course +`">
+                            <div class="upload-div">
+                                <p class="course cf">` + data.level[`${hi}00`][i].course +`</p>
+                                
+                                <p class="jet">JETBOOKS</p>
+                            </div>
+                          </a>`;
+                    h.innerHTML += hh;
+                }
+            }
+        }
+    </script>
+
+    <!-- <div class="site-stats"></div> -->
+    <div id="usefullinks" class="usefullinks"> </div>
+    <div class="comments" id="comments"></div>   
+    <footer></footer>
+    <style>
+        .usefullinks{
+            margin: 20px 0;
+        }
+        
+        @media screen and (max-width: 480px){
+            .cute a, .cute a > div, .cute >div {
+                height: 120px;
+            }
+        }
+    </style>
+
+    <script src="/general/js/nav.js"></script>
+    <script src="/general/js/index.js"></script>
+    <script src="/general/js/menu.js"></script>
+    <script src="/general/js/search.js"></script>
+    <script src="/archive/js/archive.js"></script>
+    <script src="/general/js/footer.js"></script>
+
+</body>
+</html>

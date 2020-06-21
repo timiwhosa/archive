@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="5. scale CGPA/GPA calculator by futapastquestions.com aka jetbooks.online">
+    <meta name="keywords" content=" cgpa, cgpa calculator, calculator, pq, pqs, pq's, past questions, pastquestions, futapastquestions, futa pastquestions, jet, jetbooks, jet-brand, jetbrand, futa past questions , free past questions, questions">
+    <meta name="author" content="Jet-brand">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CGPA</title>
+    <link rel="stylesheet" href="cgpastyle.css">
+</head>
+<body>
+    <div class="main-nav">
+            <div class="jetlogo">
+                <img src="/img/core-img/jetbooks-online.png" alt="jetbooks">
+            </div>
+            <div class="menu" id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    <div class="container">
+        <div class="container-ctn">
+        <!-- left showing user -->
+        <div class="left" id="left">
+            <div class="left-ctn">
+            <div class="nav-close">
+                <span id="closenav">X</span>
+            </div>
+            <div class="user">
+                <div class="userimg">
+                    <img src="road3.jpg" alt="">
+                </div>
+                <p class="username us">Username: <span class="use" id="username">hi</span></p>
+                <p class="cgpa us">CGPA: <span class="use" id="usercgpa"></span></p>
+            </div>
+            <div class="home">
+                <nav class="nav">
+                    <ul>
+                        <li class="active"><a href="/home.html">HOME</a></li>
+                        <li><a href="/about.html">ABOUT US</a></li>
+                        <li><a href="/contact.html">CONTACT</a></li>
+                        <li id="prom"><a href="/promote.html">PROMOTE PRODUCTS</a></li>
+                    </ul>
+                </nav>
+            <!-- Button Group -->
+            <div class="user-btn">
+                <a href="/jetmovies/home.html" class="btn user-btn mb-15">JETmovies</a>
+                <a href="/jetmarket/jetmarket.html" class="btn user-btn active"> TUTORIAL VIDEOS</a>
+            </div>
+            <ul id="menu-ul">
+                <li>
+                    <span><a href="#"><img src="/img/social/whatsapp.png" alt=""></a></span>
+                    <span><a href="#"><img src="/img/social/youtube.png" alt=""></a></span>
+                    <span><a href="#"><img src="/img/social/facebook.png" alt=""></a></span>
+                    <span><a href="#"><img src="/img/social/instagram.png" alt=""></a></span>
+                </li>
+            </ul>
+
+            </div></div>
+        </div>
+
+        <!-- middle -->
+        <div class="right" id="right">
+            <div class="righttop">
+                <div class="righttop-left" id="righttop-left">
+                    <h2 id="fuz">Prev Total credit point{TCP}( put 0.00 for 100level First semester)</h2>
+                    <div class="cgpa-section">
+                        <div class="cgpa-left">
+                            <h3>TCP (*prev)</h3>
+                            <input type="text" name="prevtotalpoint" id="prevtotalpoint">
+                        </div>
+                        <div class="cgpa-left">
+                            <h3>Prev Total units so far</h3>
+                            <input type="text" name="prevunits" id="prevtotalunit">
+                        </div>
+                        <div class="total">
+                            <h3> Present number of course</h3> <input type="text" id="totalcourse" placeholder="total no of courses" name="total-num">
+                        </div>
+                        
+                        <div class="inst">
+                            <h4>confused?</h4>
+                            <form action="post" id="instruction">
+                                <input type="button" value="INSTRUCTION" id="instruct" class="save">
+                            </form>
+                            <div class="instruction" id="inst">
+                                <h4>You can calculate either:</h4>
+                                <p><a href="#instcgpa">Cgpa and GPA or</a></p>
+                                <p><a href="#instgpa">GPA only.</a></p>
+                                <div class="instruction1">
+                                    <h3 id="instcgpa">To calculate your cgpa and gpa</h3>
+                                    <ol>
+                                        <li>Enter the total number of points you have gotten so far <span class="lrg">(ie the largest number you see on your result)</span> </li>
+                                        <li>Enter the total number of units you have done <span>(ie before the semester you want to calculate)</span></li>
+                                        <li>Enter the number of course you want to calculate your present GPA for(this will determine the number of rows to show)</li>
+                                        <li>click on <input type="button" value="START" name="" > to create the table</li>
+                                    </ol>
+                                    
+                                    <h3 id="instgpa">To calculate your gpa</h3>
+                                    <ol style="list-style-type:lower-alpha;">
+                                        <li>course column is optional (but can be filled for reference purpose)</li>
+                                        <li>fill the units in each column(*compulsory and accurately)</li>
+                                        <li>Fill the respective score for each Unit(*compulsory and accurately)</li>
+                                        <li>click on <input type="button" value="Calculate" name="save" id=""> (this will both calculate your cgpa and gpa)</li>
+                                        <li class="note">(YOU CAN CALCULATE ONLY YOUR GPA BY SKIPPING INSTRUCTION <span>1</span> AND <span>2</span>    )</li>
+                                    </ol>
+                                    <div class="closeinst">
+                                        <input type="button" value="CLOSE" name="" id="closeinst">
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div id="save">
+                            <input type="button" value="START" name="save" id="start">
+                        </div>
+                    </div>
+                </div>
+                <div class="righttop-right">
+                    <img src="/img/core-img/jetbooks-online.png" alt="">
+                </div>
+            </div>
+            <div class="rightbottom" id="rightbottom"><form action="POST" name="cgpaform">
+                <table id="table">
+                    <tr>
+                        <th>Course <br>(optional)</th>
+                        <th>Unit</th>
+                        <th>Score</th>
+                        <th>Grade</th>
+                        <th>GPA <br> <span>(grade point)</span></th>
+                        <th>CGPA <br> <span>(cumulative grade point)</span></th>
+                    </tr> 
+                    
+                    <tr>
+                        <td class="total">TOTAL=</td>
+                        <td class="totalunit"><span id="totalunit"></span></td>
+                        <td class="totalscore"><span id="totalscore"></span></td>
+                        <td class="grade"><span id="totalgrade"></span></td>
+                        <td class="gpa"><span id="gpa"> </span></td>
+                        <td class="cgpa"><span id="cgpa"> </span></td>
+                    </tr>
+                
+                </table>
+                <div id="save">
+                    <input type="button" value="Calculate" name="save" id="Save">
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+        <div class="new-idea">
+            <div class="features">
+                <h3>FEATURES</h3>
+                <h6>check out our</h6>
+                <a href="#"><div class="features-ctn">
+                    <div class="fet1 fet">
+                        <h3> TUTORIAL VIDEOS</h3>
+                        <p class="fet-description">Well explained tutorial videos for all courses.</p>
+                        <p class="fet-checkout">check out our playlist now  <img src="/img/core-img/video-play.png" alt="futa tutorial videos"></p>
+                    </div>
+                </a>
+
+                <a href="/library"><div class="fet2 fet">
+                        <h3> PAST QUESTIONS</h3>
+                        <p class="fet-description">Download pastquestions for all courses to your device.</p>
+                        <p class="fet-checkout">Download now <img src="/img/core-img/download.png" alt=""></p>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <div class="advert" id="advert">
+                <h3>ADVERTS</h3>
+                <div class="advert-ctn">
+                <div class="ad1 ad">
+                <div class="img-prod"> <div class="adimg">
+                        <img src="road3.jpg" alt="">
+                    </div>
+                    <div class="product-name">
+                        <b>Product:</b> <span id="productname">Lorem ipsum dolor
+                        </span>
+                    </div>
+                </div>
+                    <div class="description">
+                        <b>Description:</b> 
+                        <span id="productdescription">
+                            Lorem ipsum dolor sit amet.
+                        </span>
+                    </div>
+                </div>
+                <div class="ad2 ad">
+
+                </div>
+
+                <div class="ad3 ad">
+                    <div class="img-prod"> <div class="adimg">
+                        <img src="road3.jpg" alt="">
+                    </div>
+                    <div class="product-name">
+                        <b>Product:</b> <span id="productname">Lorem ipsum dolor
+                        </span>
+                    </div>
+                </div>
+                    <div class="description">
+                        <b>Description:</b> 
+                        <span id="productdescription">
+                            Lorem ipsum dolor sit amet.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="ad4 ad">
+                <div class="img-prod"> <div class="adimg">
+                        <img src="road3.jpg" alt="">
+                    </div>
+                    <div class="product-name">
+                        <b>Product:</b> <span id="productname">Lorem ipsum dolor
+                        </span>
+                    </div>
+                </div>
+                    <div class="description">
+                        <b>Description:</b> 
+                        <span id="productdescription">
+                            Lorem ipsum dolor sit amet.
+                        </span>
+                    </div>
+                </div>
+                <div class="ad5 ad">
+
+                </div>
+
+                <div class="ad6 ad">
+                    <div class="img-prod"> <div class="adimg">
+                        <img src="road3.jpg" alt="">
+                    </div>
+                    <div class="product-name">
+                        <b>Product:</b> <span id="productname">Lorem ipsum dolor
+                        </span>
+                    </div>
+                </div>
+                    <div class="description">
+                        <b>Description:</b> 
+                        <span id="productdescription">
+                            Lorem ipsum dolor sit amet.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="ad7 ad">
+                <div class="img-prod"> <div class="adimg">
+                        <img src="road3.jpg" alt="">
+                    </div>
+                    <div class="product-name">
+                        <b>Product:</b> <span id="productname">Lorem ipsum dolor
+                        </span>
+                    </div>
+                </div>
+                    <div class="description">
+                        <b>Description:</b> 
+                        <span id="productdescription">
+                            Lorem ipsum dolor sit amet.
+                        </span>
+                    </div>
+                </div>
+                <div class="ad8 ad">
+
+                </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <footer><div id="footer-div1">
+        <div class="logo">
+            <div class="logo-logo"><img src="/img/core-img/jetbooks-online.png" alt="jetbooks/futapastquestion.com"><img src="/img/core-img/futalogo.png" alt="futalogo jetbooks/futapastquestion.com"></div>
+            <p class="copywrite">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | JETbrand.JETbooks. </p>
+        </div>
+        <div class="navigation-links">
+            <p>Nav links</p>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CGPA CALCULATOR</a></li>
+                <li><a href="#">ADVERTISE PRODUCT</a></li>
+            </ul>
+        </div></div>
+
+        <div class="social-links">
+            <!-- <p>Social links</p> -->
+            <ul>
+                <li><a href="#"><img src="/img/social/whatsapp.png" alt=""></a></li>
+                <li><a href="#"><img src="/img/social/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="/img/social/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="/img/social/instagram.png" alt=""></a></li>
+            </ul>
+        </div>
+        
+    </footer>
+    <script src="cgpa.js"></script>
+</body>
+</html>

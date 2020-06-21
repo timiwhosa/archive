@@ -1,0 +1,251 @@
+*{
+    margin:0;
+    padding:0;
+    outline: none;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+}
+#nav{
+    display: none;
+}
+h4{
+    padding-left:5px;
+}
+.container{
+    display: block;
+    /* grid-template-columns: 1fr 5fr; */
+    min-height: 100vh;
+}
+.left{
+    display: block;
+    padding: 20px 0;
+    left:0;
+    position: fixed;
+    width: 120px;
+    background-color: #ffffff;
+    height: 100vh;
+    transition: all ease-in-out 1s;
+    box-shadow: 2px 0 21px #00000026; 
+}
+#profimg img{
+    width: 50px;
+    height: 50px;
+}
+.left ul{
+    display: block;
+    text-align: center;
+}
+.left ul li{
+    font-size: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ffc107;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.right{
+    position: relative;
+    width: calc(100vw - 120px);
+    min-height: 100vh;
+    margin-left: 120px;
+}
+#row1{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+.row1-top{
+    display: block;
+}
+.row1-top-left{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.total-views{
+    background-color: #FF5722;
+}
+.total-users{
+    background-color: #FF9800;
+}
+.total-downloads{
+    background-color: #00bcd4;
+}
+.total-pq{
+    background-color: #009688;
+}
+.row1-top-left >div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total-views{
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 6px #00000069;
+}
+.total-views h4{
+    padding: 6px 0;
+}
+.total-views p{
+    font-weight: 600;
+}
+.subject{
+    position: absolute;
+    top:50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    display: none;
+}
+#sent{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #ff9800;
+    display: none;
+    margin-left: 95%;
+}
+.subject p{
+    padding: 5px 0;
+    text-transform: capitalize;
+}
+.small{
+    font-size: 13px;
+}
+.subject p:last-child{
+    text-align: center;
+}
+.subject p input{
+    height: 30px;
+    width: 30vw;
+    padding: 5px 5px 5px 10px;
+    border:1px solid #ff9800;
+    margin: 5px 0 0 0;
+    /* color: #ff9800; */
+}
+#subjsubmit{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #ffc107;
+    font-weight: 600;
+}
+#subjsubmit:active{
+   background-color: #ff9800; 
+}
+#row3,#row2,#row4,#row5{
+    display: none;
+}
+
+/* *******complaint section********* */
+
+.complaint{
+    display:block;
+}
+.comp-headings ul{
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 2px 1px #0000004b;
+}
+.comp-headings ul li{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+    padding: 0 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#compp1{
+    box-shadow: inset 2px 2px 2px #0000005c, inset -2px -2px 2px #b0aeaec7;
+    border-radius: 7px;
+}
+.comp-headings ul li:active{
+    box-shadow: inset 2px 2px rgba(0, 0, 0, 0.356), inset -2px -2px #cecdcdb2;
+}
+.commp{
+    display: none;
+    max-height: 100vh;
+    padding-left:5px;
+}
+.hmm{
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+}
+.hmm::-webkit-scrollbar{
+    display: none;
+}
+.comp-comp{
+    padding:5px;
+    font-size: 12px;
+    width: 79%;
+    margin: 5px 0 0 10px;
+    box-shadow: 0 0 9px #00000042;
+    border-radius: 5px;
+
+}
+.comp-comp span{
+    font-size: 9px;
+}
+#request{
+    padding: 0 5px;
+    padding-bottom: 10px;
+}
+.comp-comp hr{
+    height:1px;
+    border: none;
+    background-color: #ffc107;
+}
+#name{
+    color:#ffc107;
+}
+
+@media screen and (max-width: 480px){
+    #nav{
+        display: flex;
+    }
+    .container{
+        display: block;
+        margin-top: 75px;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        margin-left: 0;
+        width: 100%;
+    }
+    /* row1 */
+    #row1{
+        display: block;
+    }
+    .total-views{
+        width: 100px;
+    }
+    .complaint{
+        margin: 10px 0 30px 0;
+    }
+    .complaint {
+        margin: 10px 0 30px 10px;
+        width: 77vw;
+    }
+    .comp-headings ul li{
+        font-size: 70%;
+    }
+    /* row2 */
+    .subject{
+        left: 50%;
+        top: 55%;
+    }
+    .subject p input{
+        width: 60vw;
+    }
+
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Jet-brand">
+    <title>Hello You!!</title>
+    <link rel="stylesheet" href="/admin/css/style.css">
+    <link rel="stylesheet" href="/admin/css/general-style.css">
+    <script src="/admin/js/jquery.min.js"></script>
+</head>
+<body>
+    <!-- menu -->
+     <div class="menu left" id="menu-menu">
+        <ul id="menu"></ul>
+    </div>
+    <!-- nav -->
+    <nav id="nav"></nav>
+    <!-- <ul id= "searchoption"></ul>
+    <div id="generalinfo"></div> -->
+    <div class="container">
+        <div class="left">
+            <ul>
+                <li id="profimg"><img src="/admin/img/jetbooks-online.png" alt=""></li>
+                <li id="dashboard" onclick="navmove(5,1)">Dashboard</li>
+                <li id="subject" onclick="navmove(5,2)">Subject</li>
+                <li id="video" onclick="navmove(5,3)">Video</li>
+                <li id="cbt" onclick="navmove(5,4)">CBT</li>
+                <li id="site-stats" onclick="navmove(5,5)">Site stats</li>
+                <!-- <li id="about">About</li> -->
+            </ul>
+        </div>
+
+        <div class="right">
+
+            <div id="row1">
+               <div class="row1-top">
+                   <div class="row1-top-left">
+                       <div><div class="total-views">
+                           <h4> VIEWS</h4>
+                           <p id="total-views">50000</p>
+                       </div></div>
+                       <!-- users -->
+                       <div><div class="total-views total-users">
+                           <h4> USERS</h4>
+                           <p id="total-users">50000</p>
+                       </div></div>
+                       <!-- users -->
+                       <div><div class="total-views total-downloads">
+                           <h4> DOWNLOADS</h4>
+                           <p id="total-downloads">50000</p>
+                       </div></div>
+                       <!-- users -->
+                       <div><div class="total-views total-pq">
+                           <h4> PQ</h4>
+                           <p id="total-pq">50000</p>
+                       </div></div>
+                   </div>
+                   <div class="row1-top-right">
+                       <h4>COMMENTS</h4>
+                       <div class="comments" id="comments">
+
+                       </div>
+                   </div>
+
+
+               </div>
+               <div class="complaint">
+                   <div class="comp-headings">
+                       <ul>
+                           <li id="compp1" class="comp " onclick="switchcomplaint(1)">suggestions <span id="suggestionno"></span></li>
+                           <li id="compp2" class="comp " onclick="switchcomplaint(2)">advert <span id="suggestionno"></span></li>
+                           <li id="compp3" class="comp " onclick="switchcomplaint(3)">complaint <span id="suggestionno"></span></li>
+                       </ul>
+                   </div>
+                   <div class="comp-div" id="complaint-div">
+                       <div id="comp1">
+                           <div id="suggestion" class="hmm">
+                        </div>
+                       </div>
+                       <div id="comp2" class="commp">
+                           <div id="advert" class="hmm">
+                            </div>
+                       </div>
+                       <div id="comp3" class="commp">
+                           <div id="complaint" class="hmm">
+                            </div>
+                       </div>
+
+                   </div>
+               </div>
+            </div>
+
+
+            <div class="subject" id="row2">
+                <span id="sent"></span>
+                <p>school <span class="small">(abbreviation)</span>:<br><input type="text" id="school" required></p>
+                <p>department <span class="small"> (abbreviation)</span>:<br><input type="text" id="department" required></p>
+                <p>level <span class="small"> (without "level")</span>:<br><input type="text" id="level" required></p>
+                <p>course  <span class="small">code (abbreviation)</span>:<br><input type="text" id="course" required></p>
+                <p>faculty  <span class="small">(abbreviation *for link o)</span>:<br><input type="text" id="faculty" required></p>
+                <p><button id="subjsubmit">SEND</button></p>
+            </div>
+
+            <div id="row3">
+                hello
+            </div>
+            <div id="row4">
+                hello
+            </div>
+
+            <div id="row5">
+                hello
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <!-- <div class="site-stats"></div> -->
+    <script src="/admin/js/admin.js"></script>
+    <script src="/admin/js/nav.js"></script>
+    <script src="/admin/js/index.js"></script>
+    <script src="/admin/js/menu.js"></script>
+    <!-- <script src="/admin/js/search.js"></script> -->
+    <script src="/admin/js/moment.js"></script>
+    <script src="/admin/js/comment.js"></script>
+    <script src="/admin/js/site-stats.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+    {
+        "course": "mee101",
+        "uploads":[
+            {
+                "course":"mee101",
+                "type":"exam",
+                "description":"mee101",
+                "level":"mee101",
+                "filename":"mee101",
+                "recommendation":"mee101",
+                "faculty":"mee101",
+                "name":"mee101",
+                "year":"mee101",
+                "date":"mee101",
+                "time":"mee101"
+            }
+        ]
+    }
+]

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JET-Archive</title>
+    <link rel="stylesheet" href="/archive/css/archive.css">
+    <link rel="stylesheet" href="/archive/css/book.css">
+    <link rel="stylesheet" href="/general/css/general-style.css">
+    <script src="/general/js/jquery.min.js"></script>
+</head>
+<body>
+    <!-- menu -->
+     <div class="menu">
+        <ul id="menu"></ul>
+    </div>
+    <!-- nav -->
+    <nav id="nav"></nav>
+    <ul id= "searchoption"></ul>
+    <div id="generalinfo"></div>
+    <div class="container">
+        <div class="bk-top">
+            <div class="bk-top-left">
+                <div class="bk-name">
+                    <h3 id="title"></h3>
+                </div>
+                <div class="bk-author" id="author">
+                    <span class="b bbk">Author: </span>
+                </div>
+                <div class="bk-pages" id="pages">
+                    <span class="b bbk">Number of Pages: </span>
+                </div>
+                <div class="bk-chapter" id="chapters">
+                    <span class="b bbk">Chapters: </span>
+                </div>
+                <div class="bk-main" id="characters">
+                    <span class="b bbk">Main Characters: </span>
+                </div>
+                <div class="bk-edition" id="edition">
+                    <span class="b bbk">Edition: </span>
+                </div>
+                <div class="bk-publisher" id="publisher">
+                    <span class="b bbk">Publisher: </span>
+                </div>
+            </div>
+            <div class="bk-right" id="image">
+            </div>
+        </div>
+
+        <section>
+            <div class="sections">
+                <p onclick="showsection(1)" id="rowsection1">Overview</p>
+                <p onclick="showsection(2)" id="rowsection2">Reviews</p>
+                <p onclick="showsection(3)" id="rowsection3">Get book</p>
+            </div>
+            <div class="row" id="row1">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia maxime tenetur molestias perspiciatis ratione harum doloribus, amet et nostrum libero magnam delectus eos suscipit vero explicabo rerum, laudantium quas repudiandae, cumque distinctio culpa odio. Quae eum earum totam consequuntur, quas ullam officia dolor est fuga asperiores nostrum, nisi accusantium veritatis labore voluptatum facilis pariatur consectetur tempora obcaecati atque assumenda, recusandae quidem eveniet saepe. Deserunt accusamus nobis praesentium amet ipsa quo saepe id quibusdam molestiae hic, corporis dolore similique qui, aliquam a iste porro suscipit repellendus! Repellat ipsam voluptatem itaque, ipsa sed neque ad voluptates deserunt magnam temporibus corrupti a provident maxime laudantium in ut enim sit eum quos id minus. Voluptate ducimus enim praesentium excepturi itaque debitis facilis fugiat alias similique blanditiis est hic aliquam sit delectus ullam veniam sapiente, nisi eaque possimus vel necessitatibus facere, deserunt vero! Rerum nemo sed consequuntur doloremque provident quis eum, fuga corrupti a. Ratione velit, soluta aspernatur similique alias molestiae deserunt iste sunt modi optio repellat nulla maxime debitis ipsam magnam fuga odio reprehenderit in expedita quo, illo sit omnis totam! Commodi alias quibusdam voluptate accusamus vero cumque asperiores exercitationem ipsum fugit dolores, ullam porro quod autem! Nemo aliquam quae rerum consequatur earum?
+            </div>
+            <div class="row" id="row2">
+                <h3>All reviews about this book</h3>
+                <div class="">
+                    
+                    <h4>Love this book? Give a review</h4>
+                    <div class="revw">
+                        <p><input type="text" name="name" id="username" placeholder="Name or Nickname"></p>
+                        <p><textarea name="review" id="userreview" placeholder="Write review here" cols="30" rows="10"></textarea></p>
+                        <div class="up"><button onclick="uploadrevw()">Post</button></div>
+                    </div>
+                </div>
+                <div class="reviews" id="reviews">  </div>
+            </div>
+
+            <div class="row" id="row3">
+                <h3>People willing to sell this book</h3>
+                <div class="">
+                    
+                    <h4>Are you an Authorised seller of this book? sell now</h4>
+                    <div class="revw">
+                        <p><input type="text" name="name" id="seller-name" placeholder="Name or Nickname">
+                        </p><input type="text" name="phone" id="seller-phone" placeholder="Phone/whatsapp number"> </p>
+                        <p><input type="text" name="price" id="seller-price" placeholder="Price of book"></p>
+                        <p><input type="text" name="price" id="seller-location" placeholder="Location"></p>
+                        <div class="up"><button onclick="uploadsell()">Save</button></div>
+                    </div>
+                </div>
+
+                <div class="reviews" id="sell">
+                    <h3>Buy from sellers</h3>
+                    <p style="color: red;">Note: Do not pay to anyone untill you receive or are sure of their genuiety</p>
+                    <div class="seller1">
+                        <div class="seller1-top">
+                            <div class=""><span class="b">Seller:</span> Timiplush</div>
+                            <div class="">Price: <span class="b">N1500</span></div>
+                        </div>
+                        <div class="seller-location"><span class="b">Location:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis soluta deleniti veritatis praesentium at!</div>
+                        <div class="seller-contact">
+                            <a href="tel:09094888047"><div class="phone">Phone</div></a>
+                            <a href="/https://wa.me/09094888047"><div class="">whatsapp</div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+<!-- <div class="site-stats"></div> -->
+    <div class="comments" id="comments"></div>   
+    <footer></footer>
+    <script>
+        var title, author, jjk;
+
+        title = window.location.href.split("&")[0].split("=")[1].replace(/%20/g, " ").trim().toLocaleLowerCase();
+        author = window.location.href.split("&")[1].split("=")[1].replace(/%20/g, " ").trim().toLocaleLowerCase();
+                
+        var uri = `/book/review/${title}/${author}`
+        let h1 = new Headers();
+        h1.append("Accept", "application/json");
+        let req1 = new Request(uri, {
+            method: "GET",
+            headers: h1,
+            mode: "cors",
+        });
+
+        fetch(req1)
+        .then((res) => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                alert(res.json().message);
+            }
+        })
+        .then((jsondata) => {
+            jjk= jsondata;
+            console.log(jjk)
+            loadbook(jsondata);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
+
+
+
+
+
+        function showsection(index){
+            for(i=1; i<=3; i++){
+                document.getElementById(`rowsection${i}`).style.borderBottom = "none";
+                document.getElementById(`row${i}`).style.display = " none";
+                
+            }
+
+            document.getElementById(`rowsection${index}`).style.borderBottom = " 5px solid #ffc107";
+            document.getElementById(`row${index}`).style.display = " block";
+        }
+
+        function uploadrevw(){
+            var name = document.getElementById("username").value;
+            var review = document.getElementById("userreview").value;
+            if(name !="" && review !=""){
+                var title,author,time,date;
+                var h = window.location.href.split("?")[1];
+                title = h.split("&")[0].split("=")[1].replace(/%20/g, " ").trim().toLocaleLowerCase();
+                author = h.split("&")[1].split("=")[1].replace(/%20/g, " ").trim().toLocaleLowerCase();
+                time= moment().format("h:mma");
+                date = moment().format("MMMM Do, YYYY");
+
+                var ul = "/book/review";
+                var option = {
+                    method : "post",
+                    headers: {"content-type": "application/json"},
+                    body : JSON.stringify({
+                            name: name,
+                            review: review,
+                            title: title,
+                            author: author,
+                            time: time,
+                            date: date
+                    })
+                }
+
+                fetch(ul, option).then((res)=>{
+                    return res.json();
+                }).then((jsondat)=>{
+                    var html=`
+                            <div class="revw1">
+                                <div class="revw1-top">
+                                    <span>${name}</span>
+                                    <span>${time}</span>
+                                    <span>${date}</span>
+                                </div>
+                                <div class="revw1-text">
+                                    ${review}
+                                </div>
+                            </div>
+                        `;
+                    $("#reviews").prepend(html);
+                    alert(jsondat.message);
+                }).catch((err)=>{
+                    console.log(err);
+                })
+                // console.log(name," ",review," ",author," ",title,"", time,"", date)
+            }
+            else{
+                alert("Pls help others know more about this book by giving a review..")
+            }
+        }
+
+
+
+        function loadbook(data){
+            var title = document.getElementById("title").innerHTML += data[0].title;
+            var author = document.getElementById("author").innerHTML += data[0].author;
+            var pages = document.getElementById("pages").innerHTML += data[0].pages;
+            var chapters = document.getElementById("chapters").innerHTML += data[0].chapters;
+            var characters = document.getElementById("characters").innerHTML += data[0].characters;
+            var edition = document.getElementById("edition").innerHTML += data[0].edition;
+            var publisher = document.getElementById("publisher").innerHTML += data[0].publisher;
+            var image = document.getElementById("image").innerHTML = `<img src="/archive/books/book-img${data[0].image.trim()}" alt="jetbooks ${data[0].title}">`;
+            var row1 = document.getElementById("row1").innerHTML += data[0].overview;
+            var reviews = document.getElementById("reviews");
+            var sell = document.getElementById("sell");
+            var html="";
+            for(i = 0; i<data[0].reviews.length; i++){
+                html+= `
+                    <div class="revw1">
+                        <div class="revw1-top">
+                            <span>${data[0].reviews[i].name}</span>
+                            <span>${data[0].reviews[i].time}</span>
+                            <span>${data[0].reviews[i].date}</span>
+                        </div>
+                        <div class="revw1-text">
+                            ${data[0].reviews[i].review}
+                        </div>
+                    </div>
+                `
+            }
+            reviews.innerHTML = html;
+
+            // for(j = 0; j<data[0].review.length; j++){
+            //     reviews.innerHTML = `
+            //         <div class="revw1">
+            //             <div class="revw${i}-top">
+            //                 <span>${data[0].review[j].name}</span>
+            //                 <span>${data[0].review[j].time}</span>
+            //                 <span>${data[0].review[j].date}</span>
+            //             </div>
+            //             <div class="revw1-text">
+            //                 ${data[0].review[j].review}
+            //             </div>
+            //         </div>
+            //     `
+            // }
+        }
+    </script>
+    <script src="/general/js/nav.js"></script>
+    <script src="/general/js/index.js"></script>
+    <script src="/general/js/menu.js"></script>
+    <script src="/general/js/search.js"></script>
+    <!-- <script src="/archive/js/archive.js"></script> -->
+    <script src="/general/js/footer.js"></script>
+    <script src="/general/js/moment.js"></script>
+
+</body>
+</html>

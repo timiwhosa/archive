@@ -1,0 +1,109 @@
+[
+
+    {"department": "age", "level": {
+        "100": [{"course": "mee101", "faculty": "sat"},
+            { "course": "mee101",  "faculty": "saat" },
+            {"course": "mee103","faculty": "sos" },
+            {
+                "course": "mee102",
+                "faculty": "seer"
+            }],
+        "200": [{"course": "mee101", "faculty": "saat"},{
+                "course": "mee101",
+                "faculty": "sems"
+            },{
+                "course": "mee102",
+                "faculty": "shht"
+            }],
+        "300": [
+            {
+                "course": "mee101",
+                "faculty": "saat"
+            },
+            {
+                "course": "mee101",
+                "faculty": "sems"
+            },
+            {
+                "course": "mee103",
+                "faculty": "shht"
+            }
+        ],
+        "400": [
+            {
+                "course": "mee101",
+                "faculty": "saat"
+            },
+            {
+                "course": "mee101",
+                "faculty": "sems"
+            },
+            {
+                "course": "mee104",
+                "faculty": "shht"
+            }
+        ],
+        "500": [
+            {
+                "course": "mee101",
+                "faculty": "saat"
+            },
+            {
+                "course": "mee101",
+                "faculty": "sems"
+            },
+            {
+                "course": "mee105",
+                "faculty": "shht"
+            }
+        ]
+    }},
+    {
+        "department": "eee",
+        "level": {
+            "100": [
+                "he",
+                "gg",
+                "evfe",
+                "fh"
+            ],
+            "500": [
+                "ff",
+                "Fff",
+                "fffff"
+            ]
+        }
+    },
+    {
+        "department": "mme",
+        "level": {
+            "100": [
+                "he",
+                "gg",
+                "evfe",
+                "fh"
+            ],
+            "200": [
+                "ff",
+                "Fff",
+                "fffff"
+            ]
+        }
+    },
+    {
+        "department": "mne",
+        "level": {
+            "100": [
+                "he",
+                "gg",
+                "evfe",
+                "fh"
+            ],
+            "200": [
+                "ff",
+                "Fff",
+                "fffff"
+            ]
+        }
+    }
+]

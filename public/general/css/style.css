@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    /* white-space: normal; */
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+body a{
+    color:black;
+}
+.container{
+    margin-top: 73px;
+    display: block;
+    width: 100vw;
+}
+h3{
+    font-size: 25px;
+    text-align: center;
+    padding: 20px 0;
+    /* position: sticky;
+    top: 70px; */
+    background: #fff;
+    z-index: 99;
+}
+hr{
+    display: none;
+}
+/* introduction: here we talk about futa and ourselves */
+.introduction{
+    font-size: 25px;
+    display: block;
+    margin:20px;
+    /* height: 60vh; */
+}
+.introduction p {
+    margin:0 auto;
+    padding: 10px 0;
+    display: block;
+    width: 80%;
+    line-height: 45px;
+}
+.introduction p a{
+    /* text-decoration: underline; */
+    color: #607D8B;
+}
+/* practice-question */
+.practice-question{
+    display: block;
+}
+.practice-question hr{
+    display: block;
+}
+.practice-q-img{
+    width: 100vw;
+    height: 350px;
+}
+.practice-q-img img{
+    width: 100vw;
+    height: 100%;
+}
+.practice-question-scroll-ctn{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 40px 0;
+    display: none;
+}
+.practice-question-scroll-ctn::-webkit-scrollbar{
+    display: none;
+}
+.practice-question-scroll-ctn .practice-question-img{
+    display: inline-block;
+    margin-right: 10px;
+    width: 168px;
+    height: 320px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #000;
+}
+.practice-question-scroll-ctn .practice-question-img:nth-child(1){
+    margin-left: 20px;
+}
+.practice-question-scroll-ctn .practice-question-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.btn-div{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    margin-top: 270px;
+}
+.btn{
+    width: auto;
+    padding: 20px;
+    border-radius: 100px;
+    background: #fbb710;
+    /* color:white; */
+    font-size: large;
+    font-weight: 600;
+    /* box-shadow: inset 2px 2px 2px #ffffff85, 
+                2px 2px 2px #000, 
+                inset -2px -2px 2px #403f3f4f; */
+    box-shadow: inset 3px 3px 2px #ffffff42,
+                2px 2px 2px 0px #00000057, 
+                inset -2px -2px 2px #0909092e;
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn:active{
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.418), inset -2px -2px 2px rgba(255, 255, 255, 0.37);
+}
+/* features */
+.features{
+    display: block;
+    width:100%;
+}
+.features h3{
+    padding: 40px 0;
+}
+.features .fet-ctn {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding:20px 0;
+    text-align: center;
+}
+.features .fet-ctn::-webkit-scrollbar{
+    display: none;
+}
+.fet-div{
+    display: inline-block;
+    word-wrap: normal;
+    margin: 10px;
+    width: 200px;
+    height: 270px;
+    overflow: hidden;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset -2px 0 2px #0808081c, inset 2px 0 2px #08080800;
+    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 
+                inset -2px 0 2px #0808083b, 
+                inset 2px 0 2px #0808083b; */
+}
+.fet-div:hover{
+    margin-bottom: -5px;
+    margin-top:-5px;
+    height: 280px;
+}
+.fet-div:hover img{
+    height: 170px;
+}
+.fet-div img{
+    width:100%;
+    height: 145px;
+}
+.course{
+    height: 20px;
+    padding:10px;
+    white-space: normal;
+}
+.year{
+    padding: 10px;
+    white-space: normal;
+}
+/* little stuffs */
+#pd{
+    color: #2b9be5;
+}
+#ua{
+    color: #fbb710;
+}
+#fu{
+    color: #82bb6d;
+}
+/* about-futa */
+.about-futa{
+    display: block;
+    width: 100%;
+    /* height: 296px; */
+    padding: 20px 0 10px 0;
+}
+.about-futa-img{
+    padding: 20px;
+}
+.about-futa-ctn{
+    display:grid;
+    grid-template-columns: 1fr auto;
+}
+.about-futa-text{
+    padding: 20px;
+    font-size: 20px;
+    line-height: 28px;
+}
+/* about us */
+.about-us{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 326px;
+    padding: 20px 0 10px 0;
+}
+.about h5{
+    margin-top:20px;
+    font-size: 15px;
+}
+.about p{
+    font-size: 15px;
+}
+.abt-head{
+    padding: 30px 0;
+}
+.abt-ctn{
+    margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.abt-ctn::-webkit-scrollbar{
+    display: none;
+}
+.abt{
+    display: inline-block;
+    margin: 10px;
+    padding-top: 10px;
+}
+.abt img{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.about-futa-text{
+    display:block;
+}
+.about-futa-text p{
+    padding: 5px 0;
+}
+.about-futa-text p span{
+    font-weight: bold;
+}
+@media screen and (max-width: 480px){
+    .introduction {
+    /* font-size: 18px; */
+    font-size: 16px;
+    }
+    .introduction p{
+        margin:0;
+        width: 100%;
+        line-height: 20px;
+    }
+    h3{
+        font-size: 23px;
+    }
+    hr{
+        display: block;
+        height: 10px;
+        outline: none;
+        border: none;
+        background: #cccaca4d;
+    }
+    .practice-question {
+        padding-bottom: 40px;
+    }
+    .practice-question-scroll-ctn{
+        padding: 20px 0;
+    }
+    .practice-question-scroll-ctn .practice-question-img{
+        width: 100px;
+        height: 170px;
+    }
+    .practice-question-scroll-ctn .practice-question-img:nth-child(1){
+        margin-left: 10px;
+    }
+    .practice-q-img{
+        height: 200px;
+    }
+    .btn-div{
+        margin-top: 144px;
+    }
+    .btn{
+        padding: 7px;
+        font-size: 13px;
+    }
+    .fet-div {
+        width: 155px;
+        height: 220px;
+    }
+    .year{
+        font-size: 12px;
+    }
+    .fet-div img{
+        height: 106px;
+    }
+    .about-futa-ctn{
+        grid-template-columns: 1fr;
+    }
+    .about-futa-ctn .about-futa-img{
+        text-align: center;
+    }
+    .about-futa-ctn .about-futa-img img{
+        width: 150px;
+    }
+}

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JET-Archive</title>
+    <link rel="stylesheet" href="/archive/css/archive.css">
+    <link rel="stylesheet" href="/general/css/general-style.css">
+    <script src="/general/js/jquery.min.js"></script>
+</head>
+<body>
+    <!-- menu -->
+     <div class="menu">
+        <ul id="menu"></ul>
+    </div>
+    <!-- nav -->
+    <nav id="nav"></nav>
+    <ul id= "searchoption"></ul>
+    <div id="generalinfo"></div>
+    <div class="vidd" id="vidd">
+        <span class="close-vid" id="close-vid" onclick="closecvideo()">&#215</span>
+        <div class="" id="vidd-div"></div>
+    </div>
+    <div class="container">
+        <h2>JETARchive</h2>
+        <div class="top">
+            <div class="slider" id="slider">
+                <h3>Welcome to the JETARchive</h3>
+                <p>Students Helping Students</p>
+                <p>Let's Help each other with materials</p>
+
+                <p>Please select a category to proceed.</p>
+            </div>
+            <div class="top-right">
+                <div class="">
+                    <h3>Past Questions:</h3>
+                    <p id="pq">5000</p>
+                </div>
+                <div class="">
+                    <h3>Handouts:</h3>
+                    <p id="hd">4000</p>
+                </div>
+                <div class="">
+                    <h3>Tutorial videos:</h3>
+                    <p id="tv">5,400</p>
+                </div>
+                <div class="">
+                    <h3>Books:</h3>
+                    <p id="books">14,400</p>
+                </div>
+            </div>
+            <style>
+                .cute a >div p , .cute >div p{
+                    font-size: 16px;
+                }
+            </style>
+            
+        </div>
+        <div class="upadf">
+            <a href="/uploadnow"><p>Click here to upload a file</p></a>
+        </div>
+        <section>
+            <div class="sections">
+                <p onclick="showsection(1)" id="rowsection1">Recent</p>
+                <p onclick="showsection(2)" id="rowsection2">Categories</p>
+                <p onclick="showsection(3)" id="rowsection3">Remarks</p>
+            </div>
+            <div id="row1" class="row">
+                <div class="uploads">
+                    <h3>Uploads</h3>
+                    <div id="uploads" class="cute"></div>
+                </div>
+                
+                <!-- ********************* -->
+                <script>
+                    // player
+                    var player = document.getElementById("vidd");
+                    var closevideo = document.getElementById("close-vid");
+
+                    function showvideo(url){
+                        player.style.display = "block"
+                        document.getElementById("vidd-div").innerHTML = `<video width="100%" height="100%" id="currentvideo" controls autoplay>
+                        <source src="${url}">
+                    </video>`
+                    }
+                    function closecvideo(){
+                        player.style.display="none";
+                        document.getElementById("currentvideo").pause();
+                        // video.pause();
+                    }
+
+                </script>
+
+
+                <div class="videos">
+                    <h3>Videos</h3>
+                    <div id="videos" class="cute" ></div>
+                </div>
+
+
+                
+            </div>
+            <div id="row2" class="row">
+                <div class="row2-top">
+                    <div class="row2-left">
+                        <div class="">
+                            <div><a href="/postutme">
+                                <div class="row2-div" style="background-image: linear-gradient(45deg, #0000006e,transparent) ,
+                       url(/archive/img/product1.jpg);">
+                                    <p>POST UTME</p>
+                                </div>
+                            </a></div>
+
+                            <div><a href="/predegree">
+                                <div class="row2-div" style="background-image: linear-gradient(45deg, #0000006e,transparent) ,
+                       url(/archive/img/product2.jpg);">
+                                    <p>PRE-DEGREE</p>
+                                </div>
+                            </a></div>
+                        </div>
+                        <div class="">
+                            <div><a href="/uabs">
+                                <div class="row2-div" style="background-image: linear-gradient(45deg, #0000006e,transparent) ,
+                       url(/archive/img/product3.jpg);">
+                                    <p>UABS </p>
+                                </div>
+                            </a></div>
+
+                            <div class="">
+                            <div class="row2-div" onclick="populateright()" style="background-image: linear-gradient(45deg, #0000006e,transparent) ,
+                       url(/archive/img/product4.jpg);">
+                                <p>STAYLITE </p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div><a href="/archive/books">
+                                <div class="row2-div" style="background-image: linear-gradient(45deg, #0000006e,transparent) ,
+                       url(/archive/img/product5.jpg);">
+                                    <p>BOOKS </p>
+                                </div>
+                            </a></div>
+
+                            <div><a href="/archive/videos">
+                                <div class="row2-div" style="background-image: linear-gradient(45deg, #0000006e,transparent) ,
+                       url(/archive/img/product6.jpg);">
+                                    <p>VIDEOS <br> <span id="play">&#9665;</span></p>
+                                    
+                                </div>
+                            </a></div>
+                        </div>
+                    </div>
+                    
+                    <span class="close-vid" id="close-fac" onclick="closefac()">&#215</span>
+                    <div class="row2-right" id="row2-right">
+                        <div class="right-notice" id="right-notice"> YOUR <br> SELECTED <br> CATEGORY <br> DATA <br> SHOWS <br> HERE</div>
+                        <div class="sty-first-display" id="sty-first-display"> 
+                            <div class="f" onclick="showfaculties()">FACULTIES</div>
+                            <div class="f1"><a href="#"><div class="f">VIDEOS</div></a></div>
+                            <div class="f1"><a href="#"><div class="f">COMMUNITY</div></a></div>
+                        </div>
+                        <div class="sty-second-display" id="fac">
+                            <p>FACULTY</p>
+                            <div class="ff"> 
+                                <div class="ff-heading" onclick="showdepartment(1)">SAAT</div>
+                                <div class="ff-dropdown" id="drop1">
+                                    <ul>
+                                        <a href="/archive/dpt?fac=saat&dpt=aec"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ff"> 
+                                <div class="ff-heading" onclick="showdepartment(2)">SAAT</div>
+                                <div class="ff-dropdown" id="drop2">
+                                    <ul>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ff"> 
+                                <div class="ff-heading" onclick="showdepartment(3)">SAAT</div>
+                                <div class="ff-dropdown" id="drop3">
+                                    <ul>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ff"> 
+                                <div class="ff-heading" onclick="showdepartment(4)">SAAT</div>
+                                <div class="ff-dropdown" id="drop4">
+                                    <ul>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ff"> 
+                                <div class="ff-heading" onclick="showdepartment(5)">SAAT</div>
+                                <div class="ff-dropdown" id="drop5">
+                                    <ul>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ff"> 
+                                <div class="ff-heading" onclick="showdepartment(6)">SAAT</div>
+                                <div class="ff-dropdown" id="drop6">
+                                    <ul>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ff"> 
+                                <div class="ff-heading" onclick="showdepartment(7)">SAAT</div>
+                                <div class="ff-dropdown" id="drop7">
+                                    <ul>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ff"> 
+                                <div class="ff-heading" onclick="showdepartment(8)">SAAT</div>
+                                <div class="ff-dropdown" id="drop8">
+                                    <ul>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                        <a href="#"><li>AEC</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cat-suggest" id="cat-suggest">
+                    <h3>Suggest a category</h3>
+                    <div class="cat-suggest-det">
+                        <div class="cat-suggest-left">
+                            <p>Your Name:</p>
+                            <input type="text" id="cat-suggest-name" placeholder="Name/Nickname">
+                            <p>Whatsapp Number:</p>
+                            <input type="number" id="cat-suggest-number" placeholder="For further contact">
+                            <p>Category Name:</p>
+                            <input type="text" id="cat-suggest-cat-name" placeholder="What should we call it">
+                            
+                        </div>
+                        <div class="cat-suggest-right">
+                            <p>Details:</p>
+                            <input type="text" id="cat-suggest-details" placeholder="About the category">
+                            <p>Reason for such category:</p>
+                            <textarea name="cat-reason" id="cat-reason" cols="30" rows="10" placeholder="Pls state reason(s) here"></textarea>
+                        </div>
+                    </div>
+                    <div class="up"><button onclick="catsuggest()">Upload</button></div>
+                </div>
+            </div>
+            <style>
+                .row3{
+                    margin: 40px;
+                    font-size: 17px;
+                    line-height: 27px;
+                }
+                .row3 h3{
+                    margin-left: 0;
+                }
+                @media screen and (max-width: 480px){
+                    .row3{
+                        margin: 20px;
+                    }
+                }
+            </style>
+            <div class="row3" id="row3">
+                <h3>All reviews about JETARchive (<span id="noofrev"></span>)</h3>
+                <div class="">
+                    
+                    <h4>Love JETARchive? Give a review or Suggestion</h4>
+                    <div class="revw">
+                        <p><input type="text" name="name" id="username" placeholder="Name or Nickname"></p>
+                        <p><textarea name="review" id="userreview" placeholder="Write review here" cols="30" rows="10"></textarea></p>
+                        <div class="up"><button onclick="uploadrevw()">Post</button></div>
+                    </div>
+                </div>
+                <div class="reviews" id="reviews"><!-- all reviews--> </div>
+            </div>
+
+        </section>
+        
+        
+    </div>
+
+    <div class="usefullinks" id="usefullinks"></div>
+    <div class="ads"></div>
+    <div class="cc">
+        <div class="contc qa">
+            <h3>CONTACT US</h3>
+            <h5>Got a message or suggestion? Lets hear from you</h5>
+            <p>Your Name:</p>
+            <input type="text" id="contact-name" placeholder="Name/Nickname" maxlength="20">
+            <p>Whatsapp Number:</p>
+            <input type="number" id="contact-number" placeholder="For further contact" maxlength="15">
+            <p>Message</p>
+            <textarea name="contact-message" id="contact-message" cols="30" rows="10" placeholder="Pls write your message here" maxlength="500"></textarea>
+
+            <div class="up"><button onclick="contactus()">Upload</button></div>
+        </div>
+
+        <div class="qa">
+        <h3>Q&A</h3>
+        <div id="qa">
+            <div class="">
+                <p onclick="showans(1)">What is JETBOOKS about?  <span > &#8595</span></p>
+                <div class="ans" id="ans1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, vero.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, molestias!
+                </div>
+            </div>
+            <div class="">
+                <p onclick="showans(2)">What is JETBOOKS about?  <span > &#8595</span></p>
+                <div class="ans" id="ans2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, vero.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, molestias!
+                </div>
+            </div>
+            <div class="">
+                <p onclick="showans(3)">What is JETBOOKS about?  <span > &#8595</span></p>
+                <div class="ans" id="ans3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, vero.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, molestias!
+                </div>
+            </div>
+            <div class="">
+                <p onclick="showans(4)">What is JETBOOKS about?  <span > &#8595</span></p>
+                <div class="ans" id="ans4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, vero.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, molestias!
+                </div>
+            </div>
+            <div class="">
+                <p onclick="showans(5)">What is JETBOOKS about?  <span > &#8595</span></p>
+                <div class="ans" id="ans5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, vero.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, molestias!
+                </div>
+            </div>
+            <div class="">
+                <p onclick="showans(6)">What is JETBOOKS about?  <span > &#8595</span></p>
+                <div class="ans" id="ans6">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, vero.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, molestias!
+                </div>
+            </div>
+            <div class="">
+                <p onclick="showans(7)">What is JETBOOKS about?  <span > &#8595</span></p>
+                <div class="ans" id="ans7">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, vero.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, molestias!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    </div>
+    
+    <!-- <div class="site-stats"></div> -->
+    <div class="comment" id="comment"></div>   
+    <footer></footer>
+
+
+    <!-- <script src="/js/pinterest_grid.js"></script>
+        
+    <script>
+        $(document).ready(function() {
+
+            $('.cute').pinterest_grid({
+                no_columns: 4,
+                padding_x: 10,
+                padding_y: 10,
+                margin_bottom: 50,
+                single_column_breakpoint: 700
+            });
+
+        });
+    </script> -->
+    <script src="/general/js/nav.js"></script>
+    <script src="/general/js/moment.js"></script>
+    <script src="/general/js/index.js"></script>
+    <script src="/general/js/menu.js"></script>
+    <script src="/general/js/search.js"></script>
+    <script src="/archive/js/archive.js"></script>
+
+    <script>
+
+        
+            var heh;
+            const uri1 = "/archive/recent/video";
+
+            let hh = new Headers();
+            hh.append("Accept", "application/json");
+            let reqq = new Request(uri1, {
+                method: "GET",
+                headers: hh,
+                mode: "cors"
+            });
+
+            fetch(reqq).then((res) => {
+                if (res.ok) {
+                    return res.json();
+                }
+                else {
+                    new Error("not bad");
+                }
+            }).then((jsondata) => {
+                heh= jsondata;
+                loadvideo(jsondata);
+                
+            }).catch((err) => {
+                console.log(err);
+            }); 
+        
+
+
+
+
+        function loadvideo(video){
+            for(i=0; i<video.length; i++){
+                var eachvideo = `
+                <div class="vid" onclick="showvideo('/archive/video/${video[i].filepath}')">
+                            <div class="video-vid">
+                                <span class="vi"><img src="/img/core-img/video-play.png" alt=""></span>
+                                <img src="/archive/video/img/${video[i].image}" alt="">
+                            </div>
+                            <div class="video-vid-text">
+                                ${video[i].description} 
+                            </div>
+                            <p class="jet">JETBOOKS</p>
+                        </div>`;
+
+                document.getElementById("videos").innerHTML += eachvideo;
+              
+            }
+            
+
+        }
+        function catsuggest(){
+            var name = document.getElementById("cat-suggest-name").value;
+            var number = document.getElementById("cat-suggest-number").value;
+            var categoryname = document.getElementById("cat-suggest-cat-name").value;
+            var details = document.getElementById("cat-suggest-details").value;
+            var reason = document.getElementById("cat-reason").value;
+            if(name.trim() != "" && number.trim() != "" && categoryname.trim() != "" && details.trim() != "" && reason.trim() != ""){
+                var uri2 = "/catsuggest";
+                var options = {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        name: `${name}`,
+                        "whatsapp number": number, 
+                        "category name": categoryname,
+                        details: details,
+                        reason : reason
+
+                    })
+                };
+
+            
+                fetch(uri2, options).then((res) => {
+                    if (res.ok) {
+                        alert("We are very grateful for Your contribution, We will get back to you shortly");
+                    } else {
+                        new Error("not bad");
+                    }
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }
+            else if(name.trim() === "" | number.trim() === "" | categoryname.trim() === "" | details.trim() === "" | reason.trim() === ""){
+                alert("all fields are required pls..")
+            }
+        }
+
+
+        
+        // const uri = "/";
+        // var options ={
+        //     method:"POST"
+        //     // headers: {"Accept", "application/json"}
+        // var html = ` <h3>reviews (<span id="noofreviews">6</span>)</h3>
+        //             <h5>Please leave us a review. <span class="mostr">below is a list of <span id="noofreviews">6</span> most recent reviews</span></h5>
+        //             <div class="reviewinput-sec">
+        //             <p class="usersname"><input type="text" name="name" placeholder="Name:" id="usersname"  ></p>
+        //                 <p class="usersreviewinput"><input type="text" id="usersreviewinput" name="review" placeholder="write something here"></p>
+        //                 <div class="butn" id="review-btn"><span id="start">review</span></div>
+        //             </div>
+        //             <div id="userreviews-div"></div>`
+        // // }
+        // document.getElementById("reviews").innerHTML = html;
+            
+        var review ;
+        $(document).ready(function(){
+            
+            const uri = "/archivereview";
+
+            let h = new Headers();
+            h.append("Accept", "application/json");
+            let req = new Request(uri, {
+                method: "GET",
+                headers: h,
+                mode: "cors"
+            });
+
+            fetch(req).then((res) => {
+                if (res.ok) {
+                    return res.json();
+                }
+                else {
+                    new Error("not bad");
+                }
+            }).then((jsondata) => {
+                review = jsondata;
+                // console.log(review);
+                loadreview(review);
+                
+            }).catch((err) => {
+                console.log(err);
+            }); 
+        });
+    
+
+        // April 31, 2020, 4:42 am
+        var j ;
+        function loadreview(review){
+            for(i=0; i<review.length; i++){
+                var eachreview = `
+                <div class="revw1">
+                    <div class="revw1-top">
+                        <span class="b">${review[i].name}</span>
+                        <span>${review[i].time}</span>
+                        <span class="block">${review[i].date}</span>
+                    </div>
+                    <div class="revw1-text">
+                        ${review[i].review}
+                    </div>
+                </div>`;
+
+                document.getElementById("reviews").innerHTML += eachreview;
+                document.getElementById("noofrev").innerHTML = i +1;
+                j=i;
+            }
+            
+
+        }
+
+
+        // document.getElementById("review-btn").addEventListener("click", createreview);
+        function uploadrevw(){
+            // alert("pls leave us a review");
+            var username = document.getElementById("username").value;
+            var userreview = document.getElementById("userreview").value;
+            if (username != "" && userreview != "" && username.length <= 12 && userreview.length<=480){
+                var revtime = moment().format("h:mm a");
+                var revdate = moment().format("MMMM Do,YYYY");
+
+                const uri2 = "/archivereview";
+                var options = {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        name: `${username}`, time: revtime, review: userreview, date: revdate
+                    })
+                };
+
+                fetch(uri2, options);
+                // 
+                var eachreview = `
+                    <div class="revw1">
+                        <div class="revw1-top" id="rev${j+2}">
+                            <span class="b">${username}</span>
+                            <span>${revtime}</span>
+                            <span class="block">${revdate}</span>
+                        </div>
+                        <div class="revw1-text">
+                            ${userreview}
+                        </div>
+                    </div>`;
+
+                $("#reviews").prepend(eachreview);
+                document.getElementById("noofrev").innerHTML =  j + 2;
+
+                document.getElementById("username").value= "";
+                document.getElementById("userreview").value= "";
+            }
+            else if (username == " " || userreview == " "){
+                alert("pls leave us a review");
+            }
+            else if (username.length >= 15){
+                alert("Sorry but your Name is too long")
+            }
+            else if (userreview.length >= 380) {
+                alert("review is too long")
+            }
+
+            
+            
+        }
+
+        function  contactus(){
+            var name = document.getElementById("contact-name").value;
+            var number = document.getElementById("contact-number").value;
+            var message = document.getElementById("contact-message").value;
+
+           if(name.trim()!= "" && number.trim()!= "" && message.trim() !=""){
+                var urr = "/contact_suggest"
+                var opt = {
+                    method: "POST",
+                    headers: {"content-type": "application/json"},
+                    body: JSON.stringify({
+                        name: name,
+                        number: number,
+                        message: message,
+                        time: moment().format("MMMM Do, YYYY h:mm a")
+                    })
+                }
+
+               fetch(urr, opt).then((res)=>{
+                   if (res.ok) {
+                        name = document.getElementById("contact-name").value = "";
+                        number = document.getElementById("contact-number").value = "";
+                        message = document.getElementById("contact-message").value = "";
+                        return res.json();
+                    }
+                    else {
+                        return res.json();
+                    }
+               }).then((json)=>{
+                    alert(json.message);
+               });
+               
+
+           }
+           else{
+               alert("We really need to hear from you. Pls fill form correctly");
+           }
+
+        }
+
+    </script>
+    
+    <script src="/general/js/footer.js"></script>
+
+</body>
+</html>

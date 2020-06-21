@@ -1,0 +1,167 @@
+[
+
+    {"department": "aec", "level": {
+        "100": [{"course": "mee101", "faculty": "sat" ,"year":[18,19,20,21] },
+            {
+                "course": "mee101",
+                "faculty": "saat",
+                "year": [
+                    18,
+                    19,
+                    20,
+                    21
+                ]
+            },
+            {
+                "course": "mee103",
+                "faculty": "sos",
+                "year": [
+                    18,
+                    19,
+                    20,
+                    21
+                ]
+            },
+            {
+                "course": "mee101",
+                "faculty": "saat",
+                "year": [
+                    18,
+                    19,
+                    20,
+                    21
+                ]
+            },
+            {
+                "course": "mee103",
+                "faculty": "sos",
+                "year": [
+                    18,
+                    19,
+                    20,
+                    21
+                ]
+            },
+            {
+                "course": "mee102",
+                "faculty": "seer" ,"year":[18,19,20,21]
+            },
+            {
+                "course": "mee101",
+                "faculty": "saat",
+                "year": [
+                    18,
+                    19,
+                    20,
+                    21
+                ]
+            },
+            {
+                "course": "mee103",
+                "faculty": "sos",
+                "year": [
+                    18,
+                    19,
+                    20,
+                    21
+                ]
+            }],
+        "200": [{"course": "mee101", "faculty": "saat"},{
+                "course": "mee101",
+                "faculty": "sems" ,"year":[18,19,20,21]
+            },{
+                "course": "mee102",
+                "faculty": "shht" ,"year":[18,19,20,21]
+            }],
+        "300": [
+            {
+                "course": "mee101",
+                "faculty": "saat" ,"year":[18,19,20,21]
+            },
+            {
+                "course": "mee101",
+                "faculty": "sems" ,"year":[18,19,20,21]
+            },
+            {
+                "course": "mee103",
+                "faculty": "shht" ,"year":[18,19,20,21]
+            }
+        ],
+        "400": [
+            {
+                "course": "mee101",
+                "faculty": "saat" ,"year":[18,19,20,21]
+            },
+            {
+                "course": "mee101",
+                "faculty": "sems" ,"year":[18,19,20,21]
+            },
+            {
+                "course": "mee104",
+                "faculty": "shht" ,"year":[18,19,20,21]
+            }
+        ],
+        "500": [
+            {
+                "course": "mee101",
+                "faculty": "saat" ,"year":[18,19,20,21]
+            },
+            {
+                "course": "mee101",
+                "faculty": "sems" ,"year":[18,19,20,21]
+            },
+            {
+                "course": "mee105",
+                "faculty": "shht" ,"year":[18,19,20,21]
+            }
+        ]
+    }},
+    {
+        "department": "eee",
+        "level": {
+            "100": [
+                "he",
+                "gg",
+                "evfe",
+                "fh"
+            ],
+            "500": [
+                "ff",
+                "Fff",
+                "fffff"
+            ]
+        }
+    },
+    {
+        "department": "mme",
+        "level": {
+            "100": [
+                "he",
+                "gg",
+                "evfe",
+                "fh"
+            ],
+            "200": [
+                "ff",
+                "Fff",
+                "fffff"
+            ]
+        }
+    },
+    {
+        "department": "mne",
+        "level": {
+            "100": [
+                "he",
+                "gg",
+                "evfe",
+                "fh"
+            ],
+            "200": [
+                "ff",
+                "Fff",
+                "fffff"
+            ]
+        }
+    }
+]

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JET-Archive</title>
+    <link rel="stylesheet" href="/archive/css/archive.css">
+    <link rel="stylesheet" href="/general/css/general-style.css">
+    <script src="/general/js/jquery.min.js"></script>
+
+    <style>
+        .cute a >div p .com, .cute >div p .com{
+            font-size: 13px;
+            font-weight: 600;
+        }
+        #exam a >div p {
+            padding: 4px 10px;
+            width: 87%;
+            /* font-size: 13px; */
+        }
+        .cute a >div p:nth-child(1), .cute >div p:nth-child(1){
+            font-size: 1.1rem;
+        }
+        @media screen and (max-width: 480px){
+            .cute a >div p, .cute >div p{
+                padding: 4px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- menu -->
+     <div class="menu">
+        <ul id="menu"></ul>
+    </div>
+    <!-- nav -->
+    <nav id="nav"></nav>
+    <ul id= "searchoption"></ul>
+    <div id="generalinfo"></div>
+    <div class="container">
+        <h2>JETARchive</h2>
+        <div class="top">
+            <div class="slider" id="slider">
+                <h3>Welcome to the JETARchive</h3>
+                <p>Let's help each other with whatever material we think is important</p>
+                <p>To Upload your's, You have to Login</p>
+
+                <p>Please select a category to proceed.</p>
+            </div>
+            <div class="top-right">
+                <div class="">
+                    <h3>Past Questions:</h3>
+                    <p id="pq">5000</p>
+                </div>
+                <div class="">
+                    <h3>Handouts:</h3>
+                    <p id="hd">4000</p>
+                </div>
+                <div class="">
+                    <h3>Tutorial videos:</h3>
+                    <p id="tv">5,400</p>
+                </div>
+                <div class="">
+                    <h3>Books:</h3>
+                    <p id="books">14,400</p>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="pq-div">
+                <h3>PAST QUESTIONS</h3>
+                <div class="exam">
+                    <h3>Exam</h3>
+                    <div class="cute" id="exam">
+                    <!-- <a href="#">
+                        <div class="upload-div">
+                            <p class="course">MEE 101</p>
+                            <p class="ty"><span class="com">Description: <br> </span>  MEE101 pastquestion</p>
+                            <p class="ty year"><span class="com">Year:</span>  2018/2019</p>
+                            <p class="ty"><span class="com">Uploaded by:</span>  Timiplush</p>
+                            <p class="ty"><span class="com">Date uploaded:</span>  25,may 2020</p>
+                            <p class="jet">JETBOOKS</p>
+                        </div>
+                    </a> -->
+                </div>
+                </div>
+
+                <div class="exam">
+                    <h3>TEST</h3>
+                    <div class="cute" id="test">
+                    <!-- <a href="#">
+                        <div class="upload-div">
+                            <p class="course">MEE 101</p>
+                            <p class="ty"><span class="com">Description: <br> </span>  MEE101 pastquestion</p>
+                            <p class="ty year"><span class="com">Year:</span>  2018/2019</p>
+                            <p class="ty"><span class="com">Uploaded by:</span>  Timiplush</p>
+                            <p class="ty"><span class="com">Date uploaded:</span>  25,may 2020</p>
+                            <p class="jet">JETBOOKS</p>
+                        </div>
+                    </a> -->
+                </div>
+                </div>
+            </div>
+
+            <div class="hd-div exam">
+                <h3>HANDOUTS</h3>
+                    <div class="cute" id="handout">
+                    <!-- <a href="#">
+                        <div class="upload-div">
+                            <p class="course">MEE 101</p>
+                            <p class="ty"><span class="com">Description: <br> </span>  MEE101 Handouts</p>
+                            <p class="ty year"><span class="com">Year:</span>  2018/2019</p>
+                            <p class="ty"><span class="com">Uploaded by:</span>  Timiplush</p>
+                            <p class="ty"><span class="com">Date uploaded:</span>  25,may 2020</p>
+                            <p class="jet">JETBOOKS</p>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+
+            <div class="rec-div">
+                <h3>RECOMMENDATIONS</h3>
+                <p>Below are the list of recommended materials you can use for this course.</p>
+                <div class="txtb">
+                    <h3>TEXTBOOKS</h3>
+                    <ul id="textbook">
+                        <!-- <li>-P.N OKEKE</li>
+                        <li>-P.N OKEKE</li> -->
+                    </ul>
+                </div>
+
+                 <div class="txtb">
+                    <h3>VIDEOS</h3>
+                    <ul id="video">
+                        <!-- <li>-Alvin and chimpmunks</li>
+                        <li>-P.N OKEKE</li> -->
+                    </ul>
+                </div>
+                
+                <div class="txtb">
+                    <h3>LINKS</h3>
+                    <ul id="link">
+                        <!-- <li><a href="#">-P.N OKEKE</a></li>
+                        <li><a href="#">-P.N OKEKE</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="course-upload-div">
+            <h3>UPLOAD</h3>
+            <p>Here, you can upload materials related to this course or any other course at all</p>
+            <p>To upload a file greater than 30mb, Please send it to us via our <a href="https://wa.me/2348140766866?text=Hi%20JETbooks%20I%20would%20like%20to%20help%20others%20by%20uploading%20the%20following%20materials%20to%20JETARchive.%20My%20name%20is%20___">whatsapp platform here</a>, with your nickname</p>
+            <div class="up-cat">
+                <p>Please select a category:</p>
+                <div class="imp">
+                    <div class="" onclick="showcat(1)"><input type="radio" name="cat" id="" checked>Past question</div>
+                    <div class="" onclick="showcat(2)"><input type="radio" name="cat" id="">Handout</div>
+                    <div class="" onclick="showcat(3)"><input type="radio" name="cat" id="">Recommendation</div>
+                    <div class="" onclick="showcat(4)"><input type="radio" name="cat" id="">Others</div>
+                </div>
+                <div class="cat1" id="cat1">
+                    <h4>Past Question</h4>
+                    <div class="cat1-top">
+                        <div class="">
+                            <p>Course code:</p>
+                            <input type="text"  id="pq-course" maxlength="7" placeholder="eg: mee101">
+                        </div>
+                        <div class="">
+                            <p>Level:</p>
+                            <input type="number" id="pq-level" maxlength="3" placeholder="number only eg:100">
+                        </div>
+                        <div class="">
+                            <p>Faculty: <span class="small">(abbreviation only)</span></p>
+                            <input type="text" id="pq-faculty" maxlength="4" placeholder="eg: seet">
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class="type"> -->
+                        <div class="">
+                             <p>Type:</p>
+                        <p><span><input type="radio" name="pq-type" id="pqexaminput" value="exam">Exam</span> <span><input type="radio" name="pq-type" id="pqtestinp" value="test">Test</span></p>
+                        </div>
+
+                        <div class="">
+                            <p>Description:</p>
+                            <input type="text" id="pq-desc" maxlength="15" placeholder="Short description pls">
+                        </div>
+
+                        <div class=""><input type="file" name="" id="pq-file"></div>
+
+                    <!-- </div> -->
+                    <!-- <div class=""> -->
+                        <div class="">
+                            <p>Year of Past Question</p>
+                            <input type="text" id="pq-year" placeholder="eg: 2018/2019">
+                        </div>
+
+                        <div class="">
+                            <p>Nickname:</p>
+                            <input type="text" id="pq-nickname" maxlength="14" placeholder="For recognition">
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="up"><button onclick="uploadpq()">Upload</button></div>
+                </div>
+
+                <div class="cat1" id="cat2">
+                    <h4>Handout</h4>
+                    <div class="cat1-top">
+                        <div class="">
+                            <p>Course code:</p>
+                            <input type="text"  id="hd-course" maxlength="7" placeholder="eg: mee101">
+                        </div>
+                        <div class="">
+                            <p>Level:</p>
+                            <input type="number" id="hd-level" maxlength="3" placeholder="number only eg:100">
+                        </div>
+                        <div class="">
+                            <p>Faculty: <span class="small">(abbreviation only)</span></p>
+                            <input type="text" id="hd-faculty" maxlength="4" placeholder="eg: seet">
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class=""> -->
+                        <div class="">
+                            <p>Description:</p>
+                            <input type="text" id="hd-desc" maxlength="15" placeholder="Short description pls">
+                        </div>
+
+                        <div class="">
+                            <p>Nickname:</p>
+                            <input type="text" id="hd-nickname" maxlength="14" placeholder="For recognition">
+                        </div>
+
+                        <div class=""><input type="file" name="" id="hd-file"></div>
+                    </div>
+
+                    <div class="up"><button onclick="uploadhd()">Upload</button></div>
+                </div>
+
+                <div class="cat1" id="cat3">
+                    <h4>Recommendation</h4>
+                    <div class="cat1-top">
+                        <div class="">
+                            <p>Course code:</p>
+                            <input type="text" id="rec-course" maxlength="7" placeholder="eg: mee101">
+                        </div>
+                        <div class="">
+                            <p>Level:</p>
+                            <input type="number" id="rec-level" maxlength="3" placeholder="number only eg:100">
+                        </div>
+                        <div class="">
+                            <p>Faculty: <span class="small">(abbreviation only)</span></p>
+                            <input type="text" id="rec-faculty" maxlength="4" placeholder="eg: seet">
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class="type"> -->
+                        <div class="">
+                             <p>Type:</p>
+                        <p><span><input type="radio" name="rec-type" value="textbook" id="rectxtbinput">Textbook</span> <span><input type="radio" name="rec-type" value="video" id="recvidinp">Video</span> <span><input type="radio" name="rec-type" value="link" id="reclinkinp">Link</span></p>
+                        
+                        </div>
+
+                        <div class="">
+                            <p>Nickname:</p>
+                            <input type="text" id="rec-nickname" maxlength="14" placeholder="For recognition">
+                        </div>
+                        <div class="">
+                            <p>txtbk/video/link</p>
+                            <input type="text" placeholder="enter data here" id="rec" maxlength="300">
+                        </div>
+
+                    </div>
+
+                    <div class="up"><button onclick="uploadrec()">Upload</button></div>
+                </div>
+                <div class="cat4" id="cat4">
+
+                </div>
+            </div>
+            <p style="padding: 40px 0;">Remember that to upload a file greater than 30mb or multiple files, You can kindly send it to us via our <a href="https://wa.me/2348140766866?text=Hi%20JETbooks%20I%20would%20like%20to%20help%20others%20by%20uploading%20the%20following%20materials%20to%20JETARchive.%20My%20name%20is%20___">whatsapp platform here</a>, with your nickname <br> OR <br> Chat us up on our whatsapp platform or through the contact section and we will come and collect it directly</p>
+
+        </div>
+
+        </div>
+
+    <!-- <div class="site-stats"></div>  -->
+    <div id="usefullinks" class="usefullinks"> </div>
+    <div class="comments" id="comments"></div>    
+    <footer></footer>
+<script>
+var subject;
+var uri = `/uploads/course/${window.location.pathname.split("/")[3]}`
+let h1 = new Headers();
+h1.append("Accept", "application/json");
+let req1 = new Request(uri, {
+    method: "GET",
+    headers: h1,
+    mode: "cors",
+});
+
+fetch(req1)
+    .then((res) => {
+        if (res.ok) {
+            return res.json();
+        } else {
+            return res.json();
+        }
+    })
+    .then((jsondata) => {
+        // myquestion={};
+        subject = jsondata;
+        if(subject.error){
+            alert(subject.error)
+        }
+        else{
+            getdata(subject);
+        }
+        
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+    function getdata(data){
+        if(data.length ==  1 ){
+            for (i = 0; i < data[0].uploads.length; i++){
+                if(data[0].uploads[i].type != "textbook" && data[0].uploads[i].type != "video" && data[0].uploads[i].type != "link"){
+                    var he= document.getElementById(`${data[0].uploads[i].type}`);
+                    he.innerHTML +=`<a href="/archive/course/download/${data[0].uploads[i].filename}">
+                                <div class="upload-div">
+                                    <p class="course">${data[0].course}</p>
+                                    <p class="ty"><span class="com">Description: <br> </span>  ${data[0].uploads[i].description}</p>
+                                    <p class="ty year"><span class="com">Year:</span>  ${data[0].uploads[i].year}</p>
+                                    <p class="ty"><span class="com">Uploaded by:</span>  ${data[0].uploads[i].name}</p>
+                                    <p class="ty"><span class="com">Date uploaded:</span>  ${data[0].uploads[i].date}</p>
+                                    <p class="jet">JETBOOKS</p>
+                                </div>
+                            </a>`;
+                }
+                else if(data[0].uploads[i].type == "textbook" || data[0].uploads[i].type == "video"){
+                    var he= document.getElementById(`${data[0].uploads[i].type}`);
+                    he.innerHTML += `<li>${data[0].uploads[i].recommendation} </li>`
+                }
+                else if(data[0].uploads[i].type == "link"){
+                    var he= document.getElementById(`${data[0].uploads[i].type}`);
+                    he.innerHTML += `<li><a href="${data[0].uploads[i].recommendation}">${data[0].uploads[i].recommendation} </a></li>`
+                }
+            }
+        }
+        else{
+            for(jj=0; jj<data.length; jj++){
+                for (i = 0; i < data[jj].uploads.length; i++){
+                    if(data[jj].uploads[i].type != "textbook" && data[jj].uploads[i].type != "video" && data[jj].uploads[i].type != "link"){
+                        var he= document.getElementById(`${data[jj].uploads[i].type}`);
+                        he.innerHTML +=`<a href="/archive/course/download/${data[jj].uploads[i].filename}">
+                                    <div class="upload-div">
+                                        <p class="course">${data[jj].course}</p>
+                                        <p class="ty"><span class="com">Description: <br> </span>  ${data[jj].uploads[i].description}</p>
+                                        <p class="ty year"><span class="com">Year:</span>  ${data[jj].uploads[i].year}</p>
+                                        <p class="ty"><span class="com">Uploaded by:</span>  ${data[jj].uploads[i].name}</p>
+                                        <p class="ty"><span class="com">Date uploaded:</span>  ${data[jj].uploads[i].date}</p>
+                                        <p class="jet">JETBOOKS</p>
+                                    </div>
+                                </a>`;
+                    }
+                    else if(data[jj].uploads[i].type == "textbook" || data[jj].uploads[i].type == "video"){
+                        var he= document.getElementById(`${data[jj].uploads[i].type}`);
+                        he.innerHTML += `<li>${data[jj].uploads[i].recommendation} </li>`
+                    }
+                    else if(data[jj].uploads[i].type == "link"){
+                        var he= document.getElementById(`${data[jj].uploads[i].type}`);
+                        he.innerHTML += `<li><a href="${data[jj].uploads[i].recommendation}">${data[jj].uploads[i].recommendation} </a></li>`
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    // upload 
+    function showcat(index){
+        for(i=1; i<=4; i++){
+            document.getElementById(`cat${i}`).style.display = "none"
+        }
+        document.getElementById(`cat${index}`).style.display = "block"
+    }
+
+
+
+    
+
+    function uploadpq(){
+    // var url2 = "/archive/upload/data?type=pq";
+    var course = document.getElementById("pq-course" ).value;
+    var typediv = document.getElementsByName("pq-type");
+    var type="";
+    for(i=0; i<2; i++){
+        if(typediv[i].checked){
+            type= typediv[i].value;
+            // console.log(type)
+        }
+    }
+    var description = document.getElementById("pq-desc").value;
+    var level = document.getElementById("pq-level" ).value;
+    var faculty = document.getElementById("pq-faculty").value;
+    var name = document.getElementById("pq-nickname").value;
+    var year = document.getElementById("pq-year").value;
+    var upload = document.getElementById("pq-file").files[0];
+    var date = moment().format("Do MMMM,YYYY");
+    var time = moment().format("h:mm a");
+    
+    const formdata = new FormData();
+    formdata.append("upload", upload);
+    // console.log(formdata);
+    if(course.trim()!="" && type.trim()!="" && description.trim()!="" && level.trim()!="" && faculty.trim()!="" && name.trim()!="" && upload !="" && upload.size <=30000000  && date.trim()!="" && time.trim()!="" && course[3]== level[0]){
+        var urll = `/archive/upload?course=${course}&type=${type}&description=${description}&level=${level}&faculty=${faculty}&name=${name}&year=${year}&date=${date}&time=${time}`;
+        fetch(urll, {
+            method: "POST",
+            body: formdata
+        })
+        .then((res)=>{
+            if(res.ok){
+                return res.json();
+            }
+            else {
+                return res.json();
+            }
+        }).then((json)=>{
+            alert(json.message);
+        }).catch(console.error);
+    }
+    else{
+        alert("pls fill form correctly and make sure file size is as specified. Also ensure that  course code matches expected level")
+    }
+}
+
+
+function uploadhd(){
+    // var url2 = "/archive/upload/data?type=pq";
+    var course = document.getElementById("hd-course").value;
+    var type="handout";
+    var description = document.getElementById("hd-desc").value;
+    var level = document.getElementById("hd-level").value;
+    var faculty = document.getElementById("hd-faculty").value;
+    var name = document.getElementById("hd-nickname").value;
+    var upload = document.getElementById("hd-file").files[0];
+    var date = moment().format("Do MMMM,YYYY");
+    var time = moment().format("h:mm a");
+
+        
+    const formdata = new FormData();
+    formdata.append("upload", upload);
+    // console.log(formdata);
+    if(course.trim()!="" && type.trim()!="" && description.trim()!="" && level.trim()!="" && faculty.trim()!="" && name.trim()!="" && upload.size <=30000000  && date.trim()!="" && time.trim()!="" &&course[3]== level[0] ){
+        var urll = `/archive/upload?course=${course.toLowerCase()}&type=${type}&description=${description}&level=${level}&faculty=${faculty.toLowerCase()}&name=${name}&date=${date}&time=${time}`;
+        fetch(urll, {
+            method: "POST",
+            body: formdata
+        })
+        .then((res)=>{
+            if(res.ok){
+                alert("file successfully uploaded")
+            }
+            else{
+               alert("sorry, file was not uploaded") 
+            }
+        }).catch(console.error);
+    }
+    else{
+        alert("pls fill form correctly and make sure file size is as specified. Also ensure that  course code matches expected level")
+    }
+}
+// .then(fetch(url2, {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: {
+//                 course,
+//                 type,
+//                 description,
+//                 level,
+//                 faculty,
+//                 name,
+//                 year
+//                 
+//             }
+//     }))
+function uploadrec(){
+    var course = document.getElementById("rec-course").value;
+    var typediv = document.getElementsByName("rec-type");
+    var type="";
+    for(i=0; i<3; i++){
+        if(typediv[i].checked){
+            type= typediv[i].value;
+            // console.log(type)
+        }
+    }
+    var recommendation = document.getElementById("rec").value;
+    var level = document.getElementById("rec-level").value;
+    var faculty = document.getElementById("rec-faculty").value;
+    var name = document.getElementById("rec-nickname").value;
+    var description="recommendation";
+    var year = moment().format("YYYY");
+    var date = moment().format("Do MMMM,YYYY");
+    var time = moment().format("h:mm a");
+    if(course.trim()!="" && type.trim()!="" && description.trim()!="" && recommendation.trim()!=""&& level.trim()!="" && faculty.trim()!="" && name.trim()!=""  && date.trim()!="" && time.trim()!="" &&course[3]== level[0]){
+        var urll = `/archive/upload?to=rec&course=${course}&type=${type}&description=${description}&recommendation=${recommendation}&level=${level}&faculty=${faculty}&name=${name}&date=${date}&time=${time}`;
+        fetch(urll, {
+            method: "POST",
+            body: "recommendation"
+        })
+        .then((res)=>{
+            if(res.ok){
+                alert("file successfully uploaded")
+            }
+        }).catch(console.error);
+    }
+    else{
+        alert("pls fill form correctly, thanks!!")
+    }
+}
+
+function  contactus(){
+            var name = document.getElementById("contact-name").value;
+            var number = document.getElementById("contact-number").value;
+            var message = document.getElementById("contact-message").value;
+
+           if(name.trim()!= "" && number.trim()!= "" && message.trim() !=""){
+                var urr = "/contact_suggest"
+                var opt = {
+                    method: "POST",
+                    headers: {"content-type": "application/json"},
+                    body: JSON.stringify({
+                        name: name,
+                        number: number,
+                        message: message,
+                        time: moment().format("MMMM Do, YYYY h:mm a")
+                    })
+                }
+
+               fetch(urr, opt).then((res)=>{
+                   if (res.ok) {
+                        name = document.getElementById("contact-name").value = "";
+                        number = document.getElementById("contact-number").value = "";
+                        message = document.getElementById("contact-message").value = "";
+                        return res.json();
+                    }
+                    else {
+                        return res.json();
+                    }
+               }).then((json)=>{
+                    alert(json.message);
+               });
+               
+
+           }
+           else{
+               alert("We really need to hear from you. Pls fill form correctly");
+           }
+
+        }
+</script>
+    <script src="/general/js/nav.js"></script>
+    <script src="/general/js/index.js"></script>
+    <script src="/general/js/menu.js"></script>
+    <script src="/general/js/search.js"></script>
+    <script src="/js/moment.js"></script>
+    <script src="/archive/js/archive.js"></script>
+    <script src="/general/js/footer.js"></script>
+
+</body>
+</html>

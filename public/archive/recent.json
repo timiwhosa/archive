@@ -1,0 +1,233 @@
+{
+  "uploads": [
+    {
+      "course": "mee101",
+      "type": "handout",
+      "description": "holl",
+      "level": "100",
+      "faculty": "seet",
+      "name": "timip",
+      "year": 2020,
+      "date": "15th june,2020",
+      "time": "4:41 pm",
+      "filename": "contact-jetbooks-timip.html"
+    },
+    {
+      "course": "mee101",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    },
+    {
+      "course": "mee101",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    },
+    {
+      "course": "mee101",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    },
+    {
+      "course": "mee102",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    },
+    {
+      "course": "mee201",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    },
+    {
+      "course": "mee101",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    },
+    {
+      "course": "mee101",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    },
+    {
+      "course": "mee101",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    },
+    {
+      "course": "mee101",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    },
+    {
+      "course": "mee101",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    },
+    {
+      "course": "mee101",
+      "type": "handout",
+      "description": "recommendation",
+      "recommendation": "/archive",
+      "level": "100",
+      "faculty": "seet",
+      "name": "mee",
+      "year": 2020,
+      "date": "12th june,2020",
+      "time": "8:44 pm",
+      "filename": "about-jetbooks-timiplush.html"
+    }
+  ],
+  "video": [
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    },
+    {
+      "filename": "filename",
+      "filepath": "filename",
+      "image": "product1.jpg",
+      "description": "description"
+    }
+  ]
+}

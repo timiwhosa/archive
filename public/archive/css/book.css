@@ -1,0 +1,122 @@
+.bk-top{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px 0;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+.bk-top-left{
+    display: grid;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.bk-name h3{
+    text-transform: uppercase;
+}
+.bk-right img{
+    max-width: 185px;
+    max-height: 273px;
+}
+.bbk{
+    font-size: 15px;
+    margin-left: 20px;
+}
+.row{
+    margin: 40px;
+    font-size: 17px;
+    line-height: 27px;
+}
+#row1{
+    font-family: Segoe UI;
+}
+
+.revw input{
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    box-shadow: inset 2px 2px 2px #00000054, inset -2px -2px 2px #bebebea9 ;
+}
+.revw textarea{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px 0;
+    max-height: 90px;
+    outline: none;
+    box-shadow: inset 2px 2px 2px #00000054, inset -2px -2px 2px #bebebea9;
+    border: none;
+}
+#row2 h3,#row3 h3 {
+    margin-left: 0;
+}
+.reviews{
+    padding-top: 10vh;
+    display: block;
+}
+.revw1, .seller1{
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    box-shadow: 0 3px 6px #00000029;
+    max-width: 70vw;
+}
+.revw1-top span{
+    margin-right: 20px;
+}
+.revw1-text{
+    padding: 10px;
+    word-break: break-all;
+}
+
+/* seller */
+.seller1{
+    width: 50vw;
+}
+.seller1-top{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.seller-contact{
+    display: flex;
+    padding: 10px;
+}
+.seller-contact div{
+    margin-right: 10px;
+    padding: 10px;
+    box-shadow:0 1px 3px #00000029;
+}
+
+@media screen and (max-width: 480px){
+    .bk-right img {
+        max-width: 100px;
+        max-height: 273px;
+        margin-right: 3vw;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    .bk-author{
+        margin-top: 15px;
+    }
+    .bbk {
+        font-size: 13px;
+        margin-left: 0;
+    }
+    .bk-top-left {
+        display: grid;
+        font-size: 13px;
+        margin-left: 0;
+    }
+    .bk-top-left div{
+        padding: 5px 0;
+    }
+    .row {
+        margin: 20px;
+        font-size: 14px;
+    }
+    .seller1{
+        width: 75vw;
+    }
+}
