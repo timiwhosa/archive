@@ -10,6 +10,7 @@ var urlencodedParser = bodyparser.urlencoded({ extended: false });
 var jsonparser = bodyparser.json();
 app.use(express.static(__dirname + "/public"));
 var {archive} = require("./routes/archive.js");
+var port = process.env.PORT || 3001;
 
 // archive
 archive(app);
@@ -173,4 +174,4 @@ app.get("/complaint", jsonparser, (req,res)=>{
 
 
 
-app.listen("3001");
+app.listen(port);
