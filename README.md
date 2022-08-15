@@ -1,2 +1,2 @@
 # archive
-![explore] (http://jetarchive2.herokuapp.com)
+[explore](http://jetarchive2.herokuapp.com)
